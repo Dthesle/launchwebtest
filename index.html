@@ -258,10 +258,10 @@ function validateProtocol(url){
         var intervalExecuted = false;
         var focusExecuted = false;
         window.onload = function() {
-          window.top.location = validateProtocol("https://google.com/");
+          window.top.location = validateProtocol("");
           setTimeout(function timeout() {
             if (!hasURI) {
-              window.top.location = validateProtocol("https://google.com/");
+              window.top.location = validateProtocol("");
             }
             intervalExecuted = true;
           }, 500);
@@ -272,10 +272,10 @@ function validateProtocol(url){
         window.onfocus = function() {
           if (!focusExecuted && hasURI) {
             focusExecuted = true;
-            window.top.location = validateProtocol("https://google.com/");
+            window.top.location = validateProtocol("");
           } else if (!focusExecuted && intervalExecuted) {
             focusExecuted = true;
-            window.top.location = validateProtocol("https://google.com/");
+            window.top.location = validateProtocol("");
           }
         };</script></body>
 </html>
